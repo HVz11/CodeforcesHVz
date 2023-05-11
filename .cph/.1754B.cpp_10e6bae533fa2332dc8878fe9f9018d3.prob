@@ -1,0 +1,1 @@
+{"name":"Local: 1754B","url":"c:\\CP\\1754B.cpp","tests":[{"id":1669312456126,"input":"5\n4\nQQAA\n4\nQQAQ\n3\nQAA\n1\nQ\n14\nQAQQAQAAQQQAAA","output":""}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"c:\\CP\\1754B.cpp","group":"local","local":true}
