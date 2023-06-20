@@ -15,7 +15,7 @@ istream &operator>>(istream &cin, vector<T> &v)
 #define vvi vector<vector<int>>
 #define vs vector<string>
 #define endl '\n'
-#define pb push_back
+#define pb push_back()
 #define pob pop_back()
 #define all(x) begin(x), end(x)
 #define sz(x) (int)x.size()
@@ -29,29 +29,34 @@ istream &operator>>(istream &cin, vector<T> &v)
 void solve(){
     int n; 
     cin >> n;
-    int a[n];
-    for(int i=0; i<n; i++){
-        cin >>a[i];
-    }
-    int sum =0 , pd=1;
+    int max_sum = 0;
+    int op = 0;
+    int a = 0;
     for (int i = 0; i < n; i++) {
-        pd *= a[i];
-        sum += a[i];
-    }   
-    int ans;
-    if (sum < 0) {
-        sum = -sum;
-        int x = (abs(sum) / 2) + sum % 2;
-            
-        if (x % 2 == 1)
-            pd = -pd;  
-            ans = (pd == -1) ? x + 1 : x;
-        } else {
-            ans = (pd == -1) ? 1 : 0;
+        int val;
+        cin >> val;
+        if (val <= 0) {
+            if (val < 0) {
+                a = 1;
+            }
         }
-        cout << ans << endl;
-}
+        else {
+            if (a == 1)
+                op++;
+            a = 0;
+        }
 
+        if (val < 0)
+            val = -val;
+
+        max_sum += val;
+    }
+
+    if (a == 1)
+        op++;
+
+    cout << max_sum << " " << op << endl;
+}
 int32_t main(){
     fio;
     int t;

@@ -37,7 +37,7 @@ void solve(){
     else {
         for (int i = 0; i < max(m,n); i++) {
             if (R[i] != L[i]) {
-                cout << abs(R[i] - L[i]) + abs(9 * (m -i -1)) << endl;
+                cout << R[i] - L[i] + 9 * (n -i -1) << endl;
                 return;
             }
         }
