@@ -26,22 +26,10 @@ istream &operator>>(istream &cin, vector<T> &v)
     cout.tie(NULL)
 
 void solve(){
-    int n;
-    cin >> n;
-    int a[n];
-    for(int i=0; i<n; ++i){
-        cin>>a[i];
-    }
-    int sum = 0;
-    for(int i=0; i<n; ++i){
-        if(a[i] > 0){
-            sum += a[i];
-        }
-        else{
-            break;
-        }
-    }
-    cout << sum << endl;
+    int n, k;
+    cin >> n >> k;
+    double result = static_cast<double>(n-1) / k;
+    cout << ceil(result) + 1 << endl;
 }
 
 int32_t main(){
