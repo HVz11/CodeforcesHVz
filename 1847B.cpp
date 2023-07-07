@@ -16,7 +16,7 @@ istream &operator>>(istream &cin, vector<T> &v){
 #define endl '\n'
 #define pb push_back()
 #define pob pop_back()
-#define all(x) begin(x), end(x)
+#define all(x) x.begin(), x.end()
 #define mod 998244353
 
 #define fio                           \
@@ -25,30 +25,35 @@ istream &operator>>(istream &cin, vector<T> &v){
     cout.tie(NULL)
 
 void solve(){
-    int n;
+    int n; 
     cin >> n;
     int arr[n];
     for (int i=0; i<n; i++){
         cin >> arr[i];
     }
-    int count = 0;
-    for (int i = 0; i < n; i++){
-        int z = arr[i];
-        for (int j = i + 1; j < n; j++){
-            z &= arr[j];
-            if(z == 0){
-                count++;
-                i = j;
-                break;
-            }
-        }
-    } 
-    if (count == 0){
+    int z=arr[0];
+    int count=0;
+    for (int i=0; i<n; i++){
+        z &= arr[i];
+    }
+    if(z != 0){
         cout << 1 << endl;
+        return;
     }
-    else{
-        cout << count << endl;
+    int cur = arr[0];
+    int i = 1;
+    while(i < n){
+        if(cur == z){
+            count++;
+            cur = arr[i];
+        }
+        else{
+            cur &= arr[i];
+        }
+        i++;
     }
+    if(cur == z) count++;
+    cout << count << endl;
 }
 
 int32_t main(){
