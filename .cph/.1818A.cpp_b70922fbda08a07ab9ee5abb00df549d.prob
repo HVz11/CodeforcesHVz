@@ -1,0 +1,1 @@
+{"name":"Local: 1818A","url":"c:\\CP\\CodeforcesHVz\\1818A.cpp","tests":[{"id":1688969736093,"input":"5\n2 2\n++\n+-\n1 3\n+-+\n4 1\n+\n-\n-\n+\n5 4\n++++\n+--+\n++-+\n+-++\n++++\n4 2\n++\n--\n--\n-+\n","output":""}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"c:\\CP\\CodeforcesHVz\\1818A.cpp","group":"local","local":true}
