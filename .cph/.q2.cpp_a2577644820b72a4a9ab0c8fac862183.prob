@@ -1,1 +1,1 @@
-{"name":"Local: q2","url":"c:\\CP\\CodeforcesHVz\\q2.cpp","tests":[],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"c:\\CP\\CodeforcesHVz\\q2.cpp","group":"local","local":true}
+{"name":"Local: q2","url":"c:\\CP\\CodeforcesHVz\\q2.cpp","tests":[{"id":1690128068833,"input":"8\n22 4\n3 9\n55 11\n42069 6\n69420 4\n69 1434\n1 3\n1 4","output":""}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"c:\\CP\\CodeforcesHVz\\q2.cpp","group":"local","local":true}
