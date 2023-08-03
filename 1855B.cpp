@@ -25,33 +25,32 @@ istream &operator>>(istream &cin, vector<T> &v){
     cout.tie(NULL);
 
 void solve(){
-    int n, c;
-    cin >> n >> c;
-    int arr[n];
-    for(int i=0; i<n; i++){
-        cin >> arr[i];
+    int n;
+    cin >> n;
+    vi a;
+    for(int i=1; i<1e2; i++){
+        if(n%i == 0){
+            a.push_back(i);
+        }
     }
-    int s=1, e=1e9;
-    while(s <= e){ 
-        int mid = s + (e-s)/2;
-        int sumall=0;
-        for(int i=0; i<n; i++){
-            sumall += (arr[i] + 2*mid)*(arr[i] + 2*mid);
-            if(sumall > c){
-                break;
-            }
-        }
-        if(sumall == c){
-            cout << mid << endl;
-        }
-        if(sumall > c){
-            e = mid -1;
-        }
+    int len = a.size();
+    int maxLen = 1, currLen= 1;
+    int l = 0, r = 0;
+
+    for (int i = 1; i < len; i++){
+        if(a[i] == a[i - 1] + 1){
+            currLen++;
+        } 
         else{
-            s = mid + 1;
+            currLen = 1;
+        }
+        if(currLen > maxLen){
+            maxLen = currLen;
+            l = i - currLen + 1;
+            r = i;   
         }
     }
-    
+    cout << r - l + 1 << endl;
 }
 
 int32_t main(){
