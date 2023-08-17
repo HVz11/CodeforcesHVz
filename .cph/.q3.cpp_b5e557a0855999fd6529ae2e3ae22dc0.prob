@@ -1,1 +1,1 @@
-{"name":"Local: q3","url":"c:\\CP\\CodeforcesHVz\\q3.cpp","tests":[{"id":1691423277003,"input":"10\n1\n5\n99\n913\n1980\n20444\n20445\n60947\n419860\n40862016542130810467\n","output":""}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"c:\\CP\\CodeforcesHVz\\q3.cpp","group":"local","local":true}
+{"name":"Local: q3","url":"c:\\CP\\CodeforcesHVz\\q3.cpp","tests":[{"id":1692112545864,"input":"4\n5\n2\n7\n10","output":""}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"c:\\CP\\CodeforcesHVz\\q3.cpp","group":"local","local":true}
