@@ -26,35 +26,45 @@ istream &operator>>(istream &cin, vector<T> &v)
     cout.tie(NULL);
 
 void solve(){
-    int n; 
-    cin >> n;
-    vvi a(n);
-    vi small, second_small;
- 
+    int n, m, k;
+    cin >> n >> m >> k;
+    int a[n], b[m];
+    int s=0;
     for(int i=0; i<n; i++){
-        int m; 
-        cin >> m;
-        for(int j=0; j<m; j++){
-            int x;
-            cin >> x;
-            a[i].pb(x);
-        } 
-        sort(all(a[i]));
-        small.pb(a[i][0]);
-        second_small.pb(a[i][1]);
+        cin >> a[i];
     }
-    sort(all(small));
-    sort(all(second_small));
- 
-    int ans = 0;
-    ans += min(second_small[0], small[0]);
-
-    for(int i=1; i<n; i++){
-        ans += second_small[i];
+    for(int i=0; i<m; i++){
+        cin >> b[i];
     }
-    cout << ans << endl;
-    
-    
+    if(k%2 == 0){
+        k = 2;
+    }
+    else{
+        k = 1;
+    }
+    for(int i=0; i<k; i++){
+        sort(a, a+n);
+        sort(b, b+m);
+        if(i%2 == 0){
+            if(a[0] < b[m-1]){
+                swap(a[0], b[m-1]);
+            }
+        }
+        else{
+            if(b[0] < a[n-1]){
+                swap(b[0], a[n-1]);
+            }
+        }
+    }
+    // if(k%2 != 0){
+    //     if(a[0] < b[m-1]){
+    //         swap(a[0], b[m-1]);
+    //     }
+    // }
+    for(int i=0; i<n; i++){
+        s += a[i];
+    }
+    cout << s << endl; 
 }
     
 

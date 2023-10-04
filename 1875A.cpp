@@ -26,35 +26,15 @@ istream &operator>>(istream &cin, vector<T> &v)
     cout.tie(NULL);
 
 void solve(){
-    int n; 
-    cin >> n;
-    vvi a(n);
-    vi small, second_small;
- 
+    int a, b, n;
+    cin >> a >> b >> n;
+    int x[n];
+    int s=0;
     for(int i=0; i<n; i++){
-        int m; 
-        cin >> m;
-        for(int j=0; j<m; j++){
-            int x;
-            cin >> x;
-            a[i].pb(x);
-        } 
-        sort(all(a[i]));
-        small.pb(a[i][0]);
-        second_small.pb(a[i][1]);
+        cin >> x[i];
+        s += min(a, x[i]);
     }
-    sort(all(small));
-    sort(all(second_small));
- 
-    int ans = 0;
-    ans += min(second_small[0], small[0]);
-
-    for(int i=1; i<n; i++){
-        ans += second_small[i];
-    }
-    cout << ans << endl;
-    
-    
+    cout << s+b-1 << endl;
 }
     
 
