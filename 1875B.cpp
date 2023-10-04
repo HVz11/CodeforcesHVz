@@ -56,11 +56,6 @@ void solve(){
             }
         }
     }
-    // if(k%2 != 0){
-    //     if(a[0] < b[m-1]){
-    //         swap(a[0], b[m-1]);
-    //     }
-    // }
     for(int i=0; i<n; i++){
         s += a[i];
     }
